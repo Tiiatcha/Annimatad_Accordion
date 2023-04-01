@@ -15,12 +15,15 @@ accordion_sections.forEach((section) => {
 accordion_headers.forEach((header) => {
   header.addEventListener("click", (e) => {
     // get clicked accordion section
+    const accordion = header.closest(".accordion_container");
+    const behavior = accordion.getAttribute("data-behavior");
+    console.log(behavior);
     const clicked_section = header.closest(".accordion_section");
     const clicked_body = clicked_section.querySelector(".accordion_body");
     const clicked_body_height = clicked_body.offsetHeight;
 
     // if the clicked section is not the current active section
-    if (!clicked_section.hasAttribute("active")) {
+    if (behavior !== "stay-open" && !clicked_section.hasAttribute("active")) {
       // select the accordion container that was clicked within
       const accordion = e.target.closest(".accordion_container");
       // get all accordion sections within the selected accordion
@@ -38,6 +41,18 @@ accordion_headers.forEach((header) => {
             .querySelector(".accordion_body_container")
             .style.removeProperty("max-height");
         }
+      }
+    } else {
+      if (clicked_section.classList.contains("active")) {
+        clicked_section.classList.remove("active");
+        clicked_section
+          .querySelector(".accordion_body_container")
+          .style.removeProperty("max-height");
+      } else {
+        clicked_section.querySelector(
+          ".accordion_body_container"
+        ).style.maxHeight = clicked_body_height;
+        clicked_section.classList.add("active");
       }
     }
   });
