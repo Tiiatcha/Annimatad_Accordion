@@ -4,15 +4,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="accordion_container" data-behavior="stay-open">
+      <ul>
+        <li>
+          Each Accordion should be setup within a div element with a class of
+          "accordion".
+        </li>
+        <li>
+          The accordion will be made up of one or more items which should be
+          defined with in another div element with a class of
+          "accordion_section"
+        </li>
+        <li></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="accordion" data-behavior="stay-open">
         <div id="section_1" class="accordion_section">
           <h2 id="section_1_head" class="accordion_head">
             <span class="accordion_head_title">Section 1</span>
-            <span class="accordion_head_switch">></span>
+            <span class="accordion_head_switch">
+              <span class="material-symbols-outlined">expand_more</span>
+            </span>
           </h2>
           <div class="accordion_body_container" id="section_1_body">
             <div class="accordion_body">
@@ -26,7 +52,9 @@
         <div id="section_2" class="accordion_section">
           <h2 id="section_2_head" class="accordion_head">
             <span class="accordion_head_title">Section 2</span>
-            <span class="accordion_head_switch">></span>
+            <span class="accordion_head_switch">
+              <span class="material-symbols-outlined">expand_more</span>
+            </span>
           </h2>
           <div class="accordion_body_container" id="section_2_body">
             <div class="accordion_body" id="section_2_body_content">
@@ -39,8 +67,10 @@
         </div>
         <div id="section_3" class="accordion_section">
           <h2 id="section_3_head" class="accordion_head">
-            <span class="accordion_head_title">Section </span>
-            <span class="accordion_head_switch">></span>
+            <span class="accordion_head_title">Section 3</span>
+            <span class="accordion_head_switch">
+              <span class="material-symbols-outlined">expand_more</span>
+            </span>
           </h2>
           <div class="accordion_body_container" id="section_3_body">
             <div class="accordion_body">
@@ -55,9 +85,14 @@
     </div>
 
     <div class="container">
-      <div class="accordion_container">
+      <div class="accordion">
         <div id="section_4" class="accordion_section active">
-          <h2 id="section_4_head" class="accordion_head">Section 1</h2>
+          <h2 id="section_4_head" class="accordion_head">
+            <span class="accordion_head_title">Section 1</span>
+            <span class="accordion_head_switch">
+              <span class="material-symbols-outlined">expand_more</span>
+            </span>
+          </h2>
           <div class="accordion_body_container" id="section_4_body">
             <div class="accordion_body">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem,
@@ -68,7 +103,12 @@
           </div>
         </div>
         <div id="section_5" class="accordion_section">
-          <h2 id="section_5_head" class="accordion_head">Section 2</h2>
+          <h2 id="section_5_head" class="accordion_head">
+            <span class="accordion_head_title">Section 2</span>
+            <span class="accordion_head_switch">
+              <span class="material-symbols-outlined">expand_more</span>
+            </span>
+          </h2>
           <div class="accordion_body_container" id="section_5_body">
             <div class="accordion_body">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem,
@@ -79,7 +119,12 @@
           </div>
         </div>
         <div id="section_6" class="accordion_section">
-          <h2 id="section_6_head" class="accordion_head">Section 3</h2>
+          <h2 id="section_6_head" class="accordion_head">
+            <span class="accordion_head_title">Section 3</span>
+            <span class="accordion_head_switch">
+              <span class="material-symbols-outlined">expand_more</span>
+            </span>
+          </h2>
           <div class="accordion_body_container" id="section_6_body">
             <div class="accordion_body">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Autem,

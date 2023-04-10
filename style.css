@@ -1,9 +1,15 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 48;
+}
 .container {
   width: 720px;
   margin: 10px auto;
 }
 
-.accordion_container {
+.accordion {
   width: 100%;
   border: 1px solid rgb(224, 224, 224);
   border-radius: 10px;
@@ -19,6 +25,8 @@
   margin: 0;
   border-bottom: 1px solid rgb(224, 224, 224);
   cursor: pointer;
+  user-select: none;
+  transition: 0.2s ease background-color;
 }
 .accordion_head_title {
   flex: 1;
@@ -28,11 +36,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
   transition: 0.2s linear transform;
   width: 1rem;
 }
-.accordion_container .accordion_section:not(:first-child) h2 {
+.accordion .accordion_section:not(:first-child) h2 {
   border-top: 1px solid rgb(224, 224, 224);
 }
 .accordion_body_container {
@@ -48,11 +56,17 @@
   transition: 0.2s linear max-height;
 }
 .accordion_section.active .accordion_head_switch {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
   transition: 0.2s linear transform;
 }
-.accordion_section:not(.active) > .accordion_head_switch {
-  transform: rotate(-90deg);
+.accordion_section:not(.active) > .accordion_head > .accordion_head_switch {
+  transform: rotate(-180deg);
+}
+.accordion_section.active .accordion_head {
+  background-color: #e5f0ff;
+}
+.accordion_section:not(.active) > .accordion_head {
+  background-color: white;
 }
 
 .accordion_body {
